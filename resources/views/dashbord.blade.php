@@ -13,7 +13,7 @@
                             {{session('status')}}
                         </div>
                     @endif
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-hover table-dark">
 
                        <tr>
                           <th>Name</th>
