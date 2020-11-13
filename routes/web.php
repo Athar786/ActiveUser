@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Mail\NewUserWelcomeMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/email',function(){
+	return new NewUserWelcomeMail();
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('change-status', 'AdminController@changeStatus')->name('changeStatus');
